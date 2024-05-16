@@ -3,4 +3,9 @@
 /Pipelined_RISCV_CPU.ip_user_files/
 /Pipelined_RISCV_CPU.runs/
 /Pipelined_RISCV_CPU.sim/
-.xpr
+.Xil/
+.git
+*.xpr
+*.jou
+*.log
+*.str

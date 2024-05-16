@@ -235,7 +235,7 @@ module SCPU(
     );
     
     CPU_databus_interface U_CPU_databus_i(
-    .raw_data(WBMEM_Forward ? WB_MemReadData : MEM_MemWriteData), .dm_ctrl(MEM_DMType), .data_bus(Data_Bus), 
+    .raw_data(WBMEM_Forward ? WD : MEM_MemWriteData), .dm_ctrl(MEM_DMType), .data_bus(Data_Bus), 
     .mem_w(MEM_MemWrite), .mem_r(MEM_MemRead), .processed_data(MEM_MemReadData)
     );
     

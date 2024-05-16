@@ -2,7 +2,7 @@
 module clk_div(input clk,
 					input rst,
 					input SlowMode,
-					(*keep = "true"*)output reg [31:0] clkdiv,
+					output reg [31:0] clkdiv,
 					output Clk_CPU
 					);
 					
