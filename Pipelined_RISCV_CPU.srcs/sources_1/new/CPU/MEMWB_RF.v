@@ -24,7 +24,6 @@ module MEMWB_RF(
     input clk,
     input reset,
     input RegWrite,
-    input MemRead,
     input [1:0] WDSel,
     input [4:0] rd,
     input [31:0] ALUResult,
@@ -35,8 +34,7 @@ module MEMWB_RF(
     output reg [4:0] rd_reg,
     output reg [31:0] ALUResult_reg,
     output reg [31:0] MemReadData_reg,
-    output reg [31:0] PC_reg,
-    output reg MemRead_reg
+    output reg [31:0] PC_reg
     );
     
     always@(posedge clk or posedge reset) begin
@@ -47,7 +45,6 @@ module MEMWB_RF(
             ALUResult_reg <= 32'b0;
             MemReadData_reg <= 32'b0;
             PC_reg <= 32'b0;
-            MemRead_reg <= 1'b0;
         end
         else begin
             RegWrite_reg <= RegWrite;
@@ -56,7 +53,6 @@ module MEMWB_RF(
             ALUResult_reg <= ALUResult;
             MemReadData_reg <= MemReadData;
             PC_reg <= PC;
-            MemRead_reg <= MemRead;
         end
     end
     
